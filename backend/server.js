@@ -7,7 +7,12 @@ import { v2 as cloudinary } from "cloudinary";
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://figma-assignment-beta-one.vercel.app",
+  "http://localhost:5173"],
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  credentials: true,
+}));
 app.use(express.json());
 
 // Multer setup
