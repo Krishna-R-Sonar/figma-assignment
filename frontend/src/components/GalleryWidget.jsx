@@ -24,8 +24,10 @@ const GalleryWidget = () => {
     formData.append("image", file);
 
     try {
+      const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
       const res = await axios.post(
-        "https://figma-assignment-3hwt.onrender.comapi/upload",
+        `${API_BASE}/api/upload`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
