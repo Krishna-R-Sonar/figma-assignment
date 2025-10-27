@@ -25,7 +25,7 @@ const GalleryWidget = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/upload",
+        "https://figma-assignment-3hwt.onrender.comapi/upload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
